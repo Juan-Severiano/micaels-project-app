@@ -14,24 +14,22 @@ export default () => {
       <View style={{ width: '100%', alignItems: 'center', marginTop: 30 }}>
         <View style={{ width: '90%', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <TouchableOpacity>
-            <Card />
+            <Card cover='Spaece' />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
-          </TouchableOpacity><TouchableOpacity>
-            <Card />
+            <Card cover='ENEM' />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Card cover='Formulas' />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Card cover='Assets' />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Card cover='Video Aulas' />
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Card cover='PodMat' />
           </TouchableOpacity>
         </View>
       </View>
