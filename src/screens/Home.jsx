@@ -3,7 +3,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '../components/Header'
 import Card from '../components/Card'
 
-export default () => {
+export default props => {
+  console.log(props)
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: '#eee' }}>
       <Header />
@@ -13,23 +14,27 @@ export default () => {
       />
       <View style={{ width: '100%', alignItems: 'center', marginTop: 30 }}>
         <View style={{ width: '90%', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <TouchableOpacity>
-            <Card cover='Spaece' />
+          <TouchableOpacity onPress={() => {
+            props.navigation.navigate('ListForm')
+          }}>
+            <Card 
+              cover={require('../../assets/1.png')} 
+            />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Card cover='ENEM' />
+            <Card cover={require('../../assets/2.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Card cover='Formulas' />
+            <Card cover={require('../../assets/3.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Card cover='Assets' />
+            <Card cover={require('../../assets/4.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Card cover='Video Aulas' />
+            <Card cover={require('../../assets/5.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Card cover='PodMat' />
+            <Card cover={require('../../assets/6.png')} />
           </TouchableOpacity>
         </View>
       </View>

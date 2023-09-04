@@ -1,16 +1,13 @@
-import { Dimensions, StyleSheet, View, TouchableOpacity, Text } from 'react-native'
+import { Dimensions, StyleSheet, View, TouchableOpacity, Text, Image } from 'react-native'
 
 export default props => {
   return (
-    <TouchableOpacity style={styles.card}>
-      <Text style={{ color: "#fff" }}>{props.cover}</Text>
-    </TouchableOpacity>
+    <Image style={styles.card} source={props.cover} />
   )
 }
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#29369f', 
     height: Dimensions.get('window').width / 4, 
     width: Dimensions.get('window').width / 4,
     borderRadius: 20,

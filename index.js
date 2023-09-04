@@ -1,5 +1,5 @@
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
-import WebsiteScreen from './src/screens/Home';
+import WebsiteScreen from './src/navigation/index';
 
 registerRootComponent(WebsiteScreen);
