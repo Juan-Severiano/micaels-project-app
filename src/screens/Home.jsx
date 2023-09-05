@@ -17,26 +17,45 @@ export default props => {
         <View style={{ width: '90%', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
           <TouchableOpacity onPress={() => {
             props.navigation.navigate('ListForm', {
-              list: lists.spaece
+              list: lists.spaece,
+              spaece: true
             })
           }}>
             <Card 
-              cover={require('../../assets/1.png')} 
+              cover={require('../../assets/1.png')}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            props.navigation.navigate('ListForm', {
+              list: lists.enem,
+              enem: true,
+            })
+          }}>
             <Card cover={require('../../assets/2.png')} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            props.navigation.navigate('ListVideos', {
+              list: lists.podmat
+            })
+          }}>
             <Card cover={require('../../assets/3.png')} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            props.navigation.navigate('ListForm', {
+              list: lists.questionBank,
+              qb: true,
+            })
+          }}>
             <Card cover={require('../../assets/4.png')} />
           </TouchableOpacity>
           <TouchableOpacity>
             <Card cover={require('../../assets/5.png')} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => {
+            props.navigation.navigate('ListVideos', {
+              list: lists.videoAulas
+            })
+          }}>
             <Card cover={require('../../assets/6.png')} />
           </TouchableOpacity>
         </View>

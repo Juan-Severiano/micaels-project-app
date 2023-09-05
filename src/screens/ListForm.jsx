@@ -32,7 +32,7 @@ export default props => {
                 <TouchableOpacity style={styles.cardContainer} onPress={() => {
                   props.navigation.navigate('OpenForm', { link: item.link })
                 }}>
-                  <Image style={styles.cardImg} source={require('../../assets/1.png')} />
+                  <Image style={styles.cardImg} source={props.route.params.spaece ? require('../../assets/1.png') : props.route.params.enem ? require('../../assets/2.png') : require('../../assets/4.png')} />
                   <Text style={{
                     fontSize: 30,
                     fontWeight: '700',
