@@ -4,6 +4,7 @@ import { WebView } from 'react-native-webview';
 import Ionicons from '@expo/vector-icons/Ionicons'
 
 export default props => {
+  console.log(props.route.params.link)
   return (
     <>
       <TouchableOpacity style={{
@@ -23,7 +24,7 @@ export default props => {
       </TouchableOpacity>
       <SafeAreaView style={{ flex: 1, backgroundColor: '#eee' }}>
         <WebView
-          source={{ uri: 'https://docs.google.com/forms/d/e/1FAIpQLSc5UnPKXumcANMVTzZ7iALqi60DeW5Z4mFFIgmpoMtkKyEnBQ/viewform?usp=send_form' }}
+          source={{ uri: props.route.params.link }}
           style={{ flex: 1 }}
         />
       </SafeAreaView>

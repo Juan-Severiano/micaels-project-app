@@ -3,8 +3,6 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons'
 
 export default props => {
-  console.log(props.route.params)
-
   return (
     <>
       <TouchableOpacity style={{
