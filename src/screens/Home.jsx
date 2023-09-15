@@ -41,9 +41,8 @@ export default props => {
             <Card cover={require('../../assets/3.png')} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => {
-            props.navigation.navigate('ListForm', {
-              list: lists.questionBank,
-              qb: true,
+            props.navigation.navigate('OpenForm', {
+              link: lists.questionBank[0].link
             })
           }}>
             <Card cover={require('../../assets/4.png')} />
