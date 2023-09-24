@@ -30,7 +30,7 @@ export default props => {
                 <TouchableOpacity style={styles.cardContainer} onPress={() => {
                   Linking.openURL(`${item.link}`)
                 }}>
-                  <Image style={styles.cardImg} source={require('../../assets/3.png')} />
+                  <Image style={styles.cardImg} source={props.route.params.vA ? require('../../assets/6.png') : require('../../assets/3.png')} />
                   <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Ionicons name='logo-youtube' size={30} color='#000' />
                     <Text style={{

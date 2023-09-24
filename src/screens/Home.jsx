@@ -52,7 +52,8 @@ export default props => {
           </TouchableOpacity>
           <TouchableOpacity onPress={() => {
             props.navigation.navigate('ListVideos', {
-              list: lists.videoAulas
+              list: lists.videoAulas,
+              vA: true
             })
           }}>
             <Card cover={require('../../assets/6.png')} />
