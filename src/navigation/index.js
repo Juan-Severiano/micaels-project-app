@@ -3,7 +3,6 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Home from '../screens/Home'
-import OpenForm from '../screens/OpenForm'
 import ListForm from '../screens/ListForm'
 import ListVideos from '../screens/ListVideos'
 
@@ -20,7 +19,6 @@ export default props => {
             )}
           </Stack.Screen>
           <Stack.Screen name='ListForm' component={ListForm} />
-          <Stack.Screen name='OpenForm' component={OpenForm} />
           <Stack.Screen name='ListVideos' component={ListVideos} />
         </Stack.Navigator>
       </NavigationContainer>

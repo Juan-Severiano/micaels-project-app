@@ -1,4 +1,4 @@
-import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native'
+import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View, FlatList, Linking } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons'
 
@@ -30,7 +30,7 @@ export default props => {
             renderItem={({ item }) => {
               return(
                 <TouchableOpacity style={styles.cardContainer} onPress={() => {
-                  props.navigation.navigate('OpenForm', { link: item.link })
+                  Linking.openURL(`${item.link}`)
                 }}>
                   <Image style={styles.cardImg} source={props.route.params.spaece ? require('../../assets/1.png') : props.route.params.enem ? require('../../assets/2.png') : require('../../assets/4.png')} />
                   <Text style={{

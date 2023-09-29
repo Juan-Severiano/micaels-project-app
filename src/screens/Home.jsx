@@ -1,4 +1,4 @@
-import { Dimensions, Image, ImageBackground, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, ImageBackground, Linking, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Header from '../components/Header'
 import Card from '../components/Card'
@@ -41,9 +41,7 @@ export default props => {
             <Card cover={require('../../assets/3.png')} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => {
-            props.navigation.navigate('OpenForm', {
-              link: lists.questionBank[0].link
-            })
+            Linking.openURL(`${lists.questionBank[0].link}`)
           }}>
             <Card cover={require('../../assets/4.png')} />
           </TouchableOpacity>
